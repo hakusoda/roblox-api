@@ -1,0 +1,12 @@
+{
+	"include": ["./src/**/*"],
+	"compilerOptions": {
+		"strict": true,
+		"target": "esnext",
+		"module": "esnext",
+		"declaration": true,
+		"skipLibCheck": true,
+		"declarationMap": true,
+		"moduleResolution": "node"
+	}
+}
