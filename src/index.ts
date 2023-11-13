@@ -1,8 +1,8 @@
-import RobloxApiClient from './client/index.ts';
+import RobloxApiClient from './client/index';
 export { RobloxApiClient };
 
-export * from './enums.ts';
-export * from './types.ts';
-export * from './errors.ts';
+export * from './enums';
+export * from './types';
+export * from './errors';
 
 export const ROBLOX_API = new RobloxApiClient();

@@ -7,11 +7,11 @@ interface DeepPickGrammar {
     mutate: never
 }
 
-import { ImageType } from '../enums.ts';
-import type RobloxApiClient from './index.ts';
-import { GenericRequestError } from '../errors.ts';
-import { mapThumbnailsToImages } from '../util.ts';
-import type { Id, DataList, Thumbnail, UserProfile, BaseUserProfile } from '../types.ts';
+import { ImageType } from '../enums';
+import type RobloxApiClient from './index';
+import { GenericRequestError } from '../errors';
+import { mapThumbnailsToImages } from '../util';
+import type { Id, DataList, Thumbnail, UserProfile, BaseUserProfile } from '../types';
 
 /** A class containing methods for fetching user information. */
 export default class ApiUsers {
