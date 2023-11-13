@@ -1,4 +1,4 @@
-import type { ImageType, ImageState, ThumbnailState } from './enums'
+import type { ImageType, ImageState, ThumbnailState } from './enums.ts';
 
 // utility types & such
 /** A unique ID that identifies something on Roblox. */

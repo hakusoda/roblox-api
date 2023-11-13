@@ -3,10 +3,10 @@
 	"compilerOptions": {
 		"strict": true,
 		"target": "esnext",
-		"module": "esnext",
+		"module": "node16",
 		"declaration": true,
-		"skipLibCheck": true,
-		"declarationMap": true,
-		"moduleResolution": "node"
+		"moduleResolution": "node16",
+		"emitDeclarationOnly": true,
+		"allowImportingTsExtensions": true
 	}
 }

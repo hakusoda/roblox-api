@@ -1,8 +1,8 @@
-import { ImageType } from '../enums';
-import type RobloxApiClient from './index';
-import { GenericRequestError } from '../errors';
-import { mapThumbnailsToImages } from '../util';
-import type { Id, GroupV2, DataList, GroupRole, Thumbnail, ApiGroupV2, PartialGroup, ApiPartialGroup } from '../types';
+import { ImageType } from '../enums.ts';
+import type RobloxApiClient from './index.ts';
+import { GenericRequestError } from '../errors.ts';
+import { mapThumbnailsToImages } from '../util.ts';
+import type { Id, GroupV2, DataList, GroupRole, Thumbnail, ApiGroupV2, PartialGroup, ApiPartialGroup } from '../types.ts';
 
 /**
  * A class containing methods for fetching user information.

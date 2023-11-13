@@ -1,7 +1,7 @@
-import ApiUsers from './users';
-import ApiGroups from './groups';
-import { WebRequestError } from '../errors';
-import type { HttpMethod, ClientRequestResponse } from '../types';
+import ApiUsers from './users.ts';
+import ApiGroups from './groups.ts';
+import { WebRequestError } from '../errors.ts';
+import type { HttpMethod, ClientRequestResponse } from '../types.ts';
 export default class RobloxApiClient {
 	/**
 	 * A reference to the ApiUsers class.
