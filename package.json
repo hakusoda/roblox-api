@@ -2,7 +2,7 @@
 	"name": "@hakumi/roblox-api",
 	"author": "HAKUMI",
 	"description": "TypeScript Library for interacting with the Roblox API.",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"type": "module",
 	"main": "src/index.ts",
 	"license": "MIT",
