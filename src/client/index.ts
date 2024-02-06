@@ -1,5 +1,6 @@
 import ApiUsers from './users';
 import ApiGroups from './groups';
+import ApiExperiences from './experiences';
 import { WebRequestError } from '../errors';
 import type { HttpMethod, ClientRequestResponse } from '../types';
 export default class RobloxApiClient {
@@ -17,11 +18,19 @@ export default class RobloxApiClient {
 	 */
 	public groups: ApiGroups;
 
+	/**
+	 * A reference to the ApiExperiences class.
+	 * 
+	 * @see {@link ApiExperiences}
+	 */
+	public experiences: ApiExperiences;
+
 	/** The base url used for most **modern** endpoints. */
 	public baseUrl = 'https://apis.roblox.com';
 	public constructor() {
 		this.users = new ApiUsers(this);
 		this.groups = new ApiGroups(this);
+		this.experiences = new ApiExperiences(this);
 	}
 
 	public async request<T>(path: string, method: HttpMethod = 'GET', payload?: any, headers?: Record<string, string>): Promise<ClientRequestResponse<T>> {

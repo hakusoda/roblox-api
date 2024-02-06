@@ -111,6 +111,87 @@ export interface GroupRole {
 	memberCount: number
 }
 
+/**
+ * An experience made up of individual places, formerly known as a game.
+ * @see https://create.roblox.com/docs/production/publishing/publishing-experiences-and-places
+ * @todo full property documentation 😝
+ */
+export interface Universe {
+	/** A unique ID (64-bit integer) that identifies the experience. */
+	id: number
+
+	/** The name of the experience, prefer to use {@link display_name} where possible. */
+	name: string
+	genre: string
+	owner: Entity & {
+		name: string
+		isRNVAccount: boolean
+		hasVerifiedBadge: boolean
+	}
+	created_at: string
+	updated_at: string
+
+	/** The full description of the experience, prefer to use {@link display_description} where possible. */
+	description: string
+	is_copyable: boolean
+	visit_count: number
+
+	/** The name of the experience {@link https://create.roblox.com/docs/production/localization | localised} in the requesting user's region. */
+	display_name: string
+
+	/** The total amount of users currently within the experience. */
+	player_count: number
+	root_place_id: number
+	is_all_genres: boolean
+
+	/** Whether the requesting user has favourited this experience. */
+	is_favourited: boolean
+	user_entry_price: number
+	is_genre_enforced: boolean
+
+	/** The full description of the experience {@link https://create.roblox.com/docs/production/localization | localised} in the requesting user's region. */
+	display_description: string
+	allowed_gear_genres: string[]
+	user_favourite_count: number
+
+	/** The maximum user capacity for all servers of this experience. */
+	max_server_player_count: number
+	private_servers_enabled: boolean
+	allowed_gear_categories: string[]
+	is_apis_enabled_in_studio: boolean
+}
+
+export interface ApiUniverse {
+	id: number
+	name: string
+	genre: string
+	price: number
+	visits: number
+	created: string
+	updated: string
+	creator: Entity & {
+		name: string
+		isRNVAccount: boolean
+		hasVerifiedBadge: boolean
+	}
+	playing: number
+	maxPlayers: number
+	sourceName: string
+	isAllGenre: boolean
+	description: string
+	rootPlaceId: number
+	copyingAllowed: boolean
+	favoritedCount: number
+	isGenreEnforced: boolean
+	sourceDescription: string
+	isFavoritedByUser: boolean
+	allowedGearGenres: string[]
+	universeAvatarType: number
+	allowedGearCategories: string[]
+	createVipServersAllowed: boolean
+	studioAccessToApisAllowed: boolean
+}
+
 /** Represents an entity on Roblox, such as a user, or group. */
 export interface Entity<T extends 'User' | 'Group' = 'User' | 'Group'> {
 	/** A unique ID that identifies the entity. */
